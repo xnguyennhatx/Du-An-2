@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_binhluan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:focusable="true"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:background="#F0F0F0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.thu.dulich1.BinhluanActivity"
+    tools:showIn="@layout/activity_binhluan">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="430dp">
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ListView
+        android:divider="#F0F0F0"
+        android:dividerHeight="8dip"
+        android:id="@+id/lvbinhluan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+    <LinearLayout
+        android:gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="end"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:background="@drawable/edittext_bottom_bg"
+            android:layout_weight="0.4"
+            android:id="@+id/comment"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1.6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addcomment"
+            android:background="@drawable/send"
+            />
+    </LinearLayout>
+</LinearLayout>
